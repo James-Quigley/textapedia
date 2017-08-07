@@ -37,15 +37,15 @@ app.listen(app.get("port"), () => {
 
 app.post("/", (req, res) => {
     console.log(req.body);
-    // client.messages
-    //     .create({
-    //         from: twilioConfig.NUMBER,
-    //         to: SOMETHING IN BODY,
-    //         body: "Received your text!"
-    //     })
-    //     .then((message: any) => {
-    //         console.log(message);
-    //     });
+    client.messages
+        .create({
+            from: twilioConfig.NUMBER,
+            to: req.body.From,
+            body: "Received your text!"
+        })
+        .then((message: any) => {
+            console.log(message);
+        });
 });
 
 module.exports = app;
