@@ -35,7 +35,7 @@ app.listen(app.get('port'), () => {
 
 app.post('/', (req, res) => {
   const term = req.body.Body;
-
+  console.log(term);
   wiki()
     .page(term)
     .then((page: any) => {
@@ -49,8 +49,31 @@ app.post('/', (req, res) => {
           })
           .then((message: any) => {
             // console.log(message);
+          })
+          .catch((error: any) => {
+            console.log(error);
+            client.messages
+              .create({
+                from: twilioConfig.NUMBER,
+                to: req.body.From,
+                body: page.raw.title + ': ' + summary.substring(0, 1500),
+              })
+              .then((message: any) => {
+                //   console.log(message);
+              });
           });
       });
+    })
+    .catch((error: any) => {
+      client.messages
+        .create({
+          from: twilioConfig.NUMBER,
+          to: req.body.From,
+          body: 'No article found',
+        })
+        .then((message: any) => {
+          // console.log(message);
+        });
     });
 });
 
