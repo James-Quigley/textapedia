@@ -1,0 +1,21 @@
+{
+  "ToCountry": "US",
+  "ToState": "AZ",
+  "SmsMessageSid": "SM3bd1d4eba370c96c96e45692ca2bedc3",
+  "NumMedia": "0",
+  "ToCity": "",
+  "FromZip": "85750",
+  "SmsSid": "SM3bd1d4eba370c96c96e45692ca2bedc3",
+  "FromState": "AZ",
+  "SmsStatus": "received",
+  "FromCity": "TUCSON",
+  "Body": "Test",
+  "FromCountry": "US",
+  "To": "+15202148375",
+  "ToZip": "",
+  "NumSegments": "1",
+  "MessageSid": "SM3bd1d4eba370c96c96e45692ca2bedc3",
+  "AccountSid": "AC2e00e9bccb0e0bbaafcc04eb3db1c981",
+  "From": "+15208707932",
+  "ApiVersion": "2010-04-01"
+}
