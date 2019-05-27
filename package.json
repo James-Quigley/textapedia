@@ -37,7 +37,7 @@
   "dependencies": {
     "@types/twilio": "0.0.9",
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
+    "express": "^4.17.1",
     "twilio": "^3.6.1",
     "wikijs": "^4.1.0"
   }
